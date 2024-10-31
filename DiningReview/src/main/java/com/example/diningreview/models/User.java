@@ -1,4 +1,4 @@
-package com.example.diningreview.entities;
+package com.example.diningreview.models;
 
 import lombok.Data;
 

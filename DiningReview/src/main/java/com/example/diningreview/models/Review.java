@@ -1,4 +1,4 @@
-package com.example.diningreview.entities;
+package com.example.diningreview.models;
 
 import lombok.Data;
 import javax.persistence.ManyToOne;
@@ -39,4 +39,7 @@ public class User {
 
     @Column(name="COMMENTARY")
     private String commentary;
+
+    @Column(name="STATUS")
+    private ReviewStatus status;
 }

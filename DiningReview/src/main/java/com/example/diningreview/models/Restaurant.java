@@ -1,4 +1,4 @@
-package com.example.diningdeview.entities;
+package com.example.diningdeview.models;
 
 import lombok.Data;
 
