@@ -10,7 +10,6 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.SecondaryTable;
 
-
 @Entity
 @Table(name="REVIEW")
 @Data
