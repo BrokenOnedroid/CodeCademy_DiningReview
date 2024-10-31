@@ -30,7 +30,7 @@ public class User {
     @Column(name="ZIPCODE")
     private String zipcode;
 
-    @Column(name="PEANUT_ALLEGIE")
+    @Column(name="PEANUT_ALLERGIE")
     private boolean peanutAllergie;
 
     @Column(name="EGG_ALLERGIE")

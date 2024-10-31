@@ -1,7 +1,7 @@
 package com.example.diningreview.entities;
 
 import lombok.Data;
-
+import javax.persistence.ManyToOne;
 import javax.persistence.Entity;
 import javax.persistence.Table;
 import javax.persistence.Column;
@@ -13,8 +13,6 @@ import javax.persistence.SecondaryTable;
 
 @Entity
 @Table(name="REVIEW")
-@SecondaryTable(name="USER", 
-    pkJoinColumn=@PrimaryKeyJoinColumns(name="ID"))
 @Data
 public class User {
 
@@ -23,6 +21,22 @@ public class User {
     private Long id;
 
     @Column(name="USERNAME")
+    @ManyToOne
+    private User user;
 
+    @Column(name="RESTRAUNT")
+    @ManyToOne
+    private Restaurant restaurant:
 
+    @Column(name="PEANUT_SCORE")
+    private Integer peanutScore;
+
+    @Column(name="EGG_SCORE")
+    private Integer eggScore;
+
+    @Column(name="DIARY_SCORE")
+    private Integer diaryScore;
+
+    @Column(name="COMMENTARY")
+    private String commentary;
 }
