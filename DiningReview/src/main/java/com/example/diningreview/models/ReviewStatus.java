@@ -1,6 +1,6 @@
 package com.example.diningreview.models;
 
-private enum ReviewStatus {
+public enum ReviewStatus {
     PENDING,
     REJECTED,
     ACCEPTED

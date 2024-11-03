@@ -1,0 +1,10 @@
+/home/vincentk/Programming/CodeCademy_DiningReview/DiningReview/src/main/java/com/example/diningreview/DiningReviewApplication.java
+/home/vincentk/Programming/CodeCademy_DiningReview/DiningReview/src/main/java/com/example/diningreview/controller/UserController.java
+/home/vincentk/Programming/CodeCademy_DiningReview/DiningReview/src/main/java/com/example/diningreview/models/AdminReviewAction.java
+/home/vincentk/Programming/CodeCademy_DiningReview/DiningReview/src/main/java/com/example/diningreview/models/Restaurant.java
+/home/vincentk/Programming/CodeCademy_DiningReview/DiningReview/src/main/java/com/example/diningreview/models/Review.java
+/home/vincentk/Programming/CodeCademy_DiningReview/DiningReview/src/main/java/com/example/diningreview/models/ReviewStatus.java
+/home/vincentk/Programming/CodeCademy_DiningReview/DiningReview/src/main/java/com/example/diningreview/models/User.java
+/home/vincentk/Programming/CodeCademy_DiningReview/DiningReview/src/main/java/com/example/diningreview/repositories/RestaurantRepository.java
+/home/vincentk/Programming/CodeCademy_DiningReview/DiningReview/src/main/java/com/example/diningreview/repositories/ReviewRepository.java
+/home/vincentk/Programming/CodeCademy_DiningReview/DiningReview/src/main/java/com/example/diningreview/repositories/UserRepository.java

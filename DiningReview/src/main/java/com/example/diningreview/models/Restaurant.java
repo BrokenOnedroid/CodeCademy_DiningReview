@@ -1,4 +1,4 @@
-package com.example.diningdeview.models;
+package com.example.diningreview.models;
 
 import lombok.Data;
 
@@ -15,7 +15,7 @@ import javax.persistence.GenerationType;
 public class Restaurant {
 
     @Id
-    @GeneratedValue(strategy=GenrationType.IDENTITY)
+    @GeneratedValue(strategy=GenerationType.IDENTITY)
     private Long id;
 
      @Column(name="NAME")

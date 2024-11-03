@@ -9,8 +9,16 @@ package com.example.diningreview.controller;
 
 import com.example.diningreview.models.User;
 
-@RestMapping("/User")
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RestController;
+//import org.springframework.web.bind.annotation.RequestMapping;
+
 @RestController
-public class AdminController {
+public class UserController {
+    @GetMapping("/{displayName}")
+    public User getByName(@RequestParam(name="dispayName") String name) {
+        return getByName(name);
+    }
 
 }
