@@ -1,5 +1,7 @@
 package com.project.DiningReview.model;
 
-public class ReviewStatus {
-    
+public enum ReviewStatus {
+    PENDING,
+    REJECTED,
+    ACCEPTED
 }
