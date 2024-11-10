@@ -7,12 +7,12 @@
 
 package com.example.diningreview.controller;
 
-import com.example.diningreview.models.User;
-
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 //import org.springframework.web.bind.annotation.RequestMapping;
+
+import com.example.diningreview.models.User;
 
 @RestController
 public class UserController {

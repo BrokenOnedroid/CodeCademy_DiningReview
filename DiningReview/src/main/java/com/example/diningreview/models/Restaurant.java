@@ -21,8 +21,8 @@ public class Restaurant {
      @Column(name="NAME")
      private String name;
 
-     @Column(name="ADRESS")
-     private String adress;
+     @Column(name="ADDRESS")
+     private String address;
 
      @Column(name="SCORE_PEANUT")
      private Integer scorePeanut;

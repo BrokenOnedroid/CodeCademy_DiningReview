@@ -30,12 +30,12 @@ public class User {
     @Column(name="ZIPCODE")
     private String zipcode;
 
-    @Column(name="PEANUT_ALLERGIE")
-    private boolean peanutAllergie;
+    @Column(name="PEANUT_ALLERGY")
+    private boolean peanutAllergy;
 
-    @Column(name="EGG_ALLERGIE")
-    private boolean eggAllergie;
+    @Column(name="EGG_ALLERGY")
+    private boolean eggAllergy;
 
-    @Column(name="DAIRY_ALLERGIE")
-    private boolean diaryAllergie;
+    @Column(name="DAIRY_ALLERGY")
+    private boolean diaryAllergy;
 }
