@@ -5,14 +5,14 @@
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>3.3.4</version>
+		<version>3.3.5</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.example</groupId>
+	<groupId>com.project</groupId>
 	<artifactId>DiningReview</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>DiningReview</name>
-	<description>CodeCademy Portfolio Project</description>
+	<description>Portfolio Project</description>
 	<url/>
 	<licenses>
 		<license/>
@@ -55,10 +55,10 @@
 			<scope>test</scope>
 		</dependency>
 		<dependency>
-    		<groupId>org.hibernate</groupId>
-    		<artifactId>hibernate-core</artifactId>
-    		<version>5.4.24.Final</version>
-		</dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-core</artifactId>
+			<version>5.4.24.Final</version>
+	</dependency>
 	</dependencies>
 
 	<build>
