@@ -1,4 +1,4 @@
-package com.project.DiningReview.model;
+package com.project.DiningReview.entities;
 
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
