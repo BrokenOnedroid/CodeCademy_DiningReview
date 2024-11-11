@@ -1,4 +1,4 @@
-package com.project.DiningReview.model;
+package com.project.DiningReview.entities;
 
 public enum ReviewStatus {
     PENDING,
