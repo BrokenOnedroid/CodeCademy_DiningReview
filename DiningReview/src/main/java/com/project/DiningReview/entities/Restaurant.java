@@ -20,9 +20,9 @@ public class Restaurant {
     private String name;
     private String zipCode;
 
-    private Float overallScore;
-    private Integer eggScore;
-    private Integer dairyScore;
-    private Integer peanutScore;
+    private String overallScore;
+    private String eggScore;
+    private String dairyScore;
+    private String peanutScore;
     
 }

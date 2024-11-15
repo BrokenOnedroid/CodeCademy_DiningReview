@@ -65,11 +65,8 @@ public class UserController {
         if (!userToSearch.isPresent()) {
             throw new ResponseStatusException(HttpStatus.NOT_FOUND, "User not found.");
         }
-
         User userToUpdate = userToSearch.get();
-
         userRepository.save(userToUpdate);
-
     }
 
     public User checkForUser(User user) {
@@ -86,7 +83,7 @@ public class UserController {
         if (userOptional.isPresent()) {
             throw new ResponseStatusException(HttpStatus.CONFLICT, "User already exits!");
         }
-        
+   
         return user;
     }
 }
