@@ -8,8 +8,6 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import com.project.DiningReview.entities.Restaurant;
 
 public interface RestaurantRepository extends JpaRepository<Restaurant, Long> {
-    Optional<Restaurant> findRestaurantById(Long id);
-
     Optional<Restaurant> findRestaurantByNameAndZipCode(String name, String zipCode);
 
     List<Restaurant> findRestaurantByZipCodeAndEggScoreNotNullOrderByEggScore(String zipCode);

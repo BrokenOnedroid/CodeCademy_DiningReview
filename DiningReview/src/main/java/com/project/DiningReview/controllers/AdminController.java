@@ -50,6 +50,10 @@ public class AdminController {
         }
 
         reviews = reviewRepository.findReviewsByStatus(reviewStatus);
+
+        if (reviews.isEmpty()) {
+            throw new ResponseStatusException(HttpStatus.NOT_FOUND, "nothing found.");
+        }
         return reviews;
     }
 }
