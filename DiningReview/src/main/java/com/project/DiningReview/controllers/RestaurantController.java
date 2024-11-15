@@ -1,6 +1,7 @@
 package com.project.DiningReview.controllers;
 
 import org.springframework.http.HttpStatus;
+import org.springframework.http.HttpStatusCode;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -37,7 +38,20 @@ public class RestaurantController {
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
     public void addRestaurant(@RequestBody Restaurant restaurant) {
+        Optional<Restaurant> restaurantOptional;
+        String restaurantOptionalName;
+        String restaurantOptionalZipCode;
 
+        restaurantOptionalName = restaurant.getName();
+        restaurantOptionalZipCode = restaurant.getZipCode();
+
+        restaurantOptional = restaurantRepository.findRestaurantByNameAndZipCode(restaurantOptionalName, restaurantOptionalZipCode);
+
+        if (!restaurantOptional.isPresent()) {
+            throw new ResponseStatusException(HttpStatus.CONFLICT, "Restaurant already exits.");
+        }
+
+        restaurantRepository.save(restaurant);
     }
 
     @GetMapping("/Search")
