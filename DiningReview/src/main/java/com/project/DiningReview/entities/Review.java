@@ -17,8 +17,7 @@ public class Review {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private String displayName;
-
+    private String userName;
     private Long restaurantId;
 
     private Integer peanutScore;
@@ -27,5 +26,5 @@ public class Review {
 
     private ReviewStatus status;
 
-    private String comment;
+    private String reviewText;
 }

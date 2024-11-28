@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.server.ResponseStatusException;
 
-import com.project.DiningReview.entities.User;
+import com.project.DiningReview.entities.AppUser;
 import com.project.DiningReview.repositories.UserRepository;
 
 import java.util.Optional;
@@ -29,60 +29,59 @@ public class UserController {
 
     @GetMapping
     @ResponseStatus(HttpStatus.OK)
-    public List<User> getAllUsers() {
+    public List<AppUser> getAllUsers() {
         return userRepository.findAll();
     }
 
     //create Entry in db
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
-    public void addUser(@RequestBody User user) {
+    public void addUser(@RequestBody AppUser user) {
         //check input 
-        User userToSave = checkForUser(user);
+        AppUser userToSave = checkForUser(user);
         //save ifokay
         userRepository.save(userToSave);
     }
 
     @GetMapping("/displayName")
     @ResponseStatus(HttpStatus.OK)
-    public User getUser(@PathVariable String displayName) {
-        Optional<User> userToSearch = userRepository.findUserByDisplayName(displayName);
+    public AppUser getUser(@PathVariable String displayName) {
+        Optional<AppUser> userToSearch = userRepository.findUserByDisplayName(displayName);
 
         if (!userToSearch.isPresent()) {
             throw new ResponseStatusException(HttpStatus.NOT_FOUND, "User not found.");
         }
 
-        User userToFind = userToSearch.get();       
+        AppUser userToFind = userToSearch.get();       
         return userToFind;
     }
 
     @PutMapping("/displayName")
     @ResponseStatus(HttpStatus.OK)
-    public void updateUser(@RequestBody User user) {
-        Optional<User> userToSearch = userRepository.findUserByDisplayName(user.getDisplayName());
+    public void updateUser(@RequestBody AppUser user) {
+        Optional<AppUser> userToSearch = userRepository.findUserByDisplayName(user.getDisplayName());
 
         if (!userToSearch.isPresent()) {
             throw new ResponseStatusException(HttpStatus.NOT_FOUND, "User not found.");
         }
-        User userToUpdate = userToSearch.get();
+        AppUser userToUpdate = userToSearch.get();
         userRepository.save(userToUpdate);
     }
 
-    public User checkForUser(User user) {
-        Optional<User> userOptional;
+    public AppUser checkForUser(AppUser user) {
+        Optional<AppUser> userOptional;
 
         // check if user var is valid (=> atleast contains displayname else query not possible)
         // not sure but isEmpty needs the display name to exits == null should catch that case
         if (user.getDisplayName() == null || user.getDisplayName().isEmpty()) {
-            throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "Displayname is necessary");
+            throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "Displayname is necessary.");
         }
 
         userOptional = userRepository.findUserByDisplayName(user.getDisplayName());
         // User already exits
         if (userOptional.isPresent()) {
-            throw new ResponseStatusException(HttpStatus.CONFLICT, "User already exits!");
-        }
-   
+            throw new ResponseStatusException(HttpStatus.CONFLICT, "User already exits.");
+        }   
         return user;
     }
 }

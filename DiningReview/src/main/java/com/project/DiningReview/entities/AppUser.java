@@ -12,7 +12,7 @@ import jakarta.persistence.Table;
 @Table(name="USERS")
 @Data
 @NoArgsConstructor
-public class User {
+public class AppUser {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
