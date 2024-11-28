@@ -1,6 +1,5 @@
 package com.project.DiningReview.controllers;
 
-import org.springframework.boot.autoconfigure.security.SecurityProperties.User;
 import org.springframework.http.HttpStatus;
 import org.springframework.util.ObjectUtils;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -54,7 +53,6 @@ public class ReviewController {
 
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
-
     public void addReview(@RequestBody Review review) {
         //Validate Review
         validateReviewData(review);
