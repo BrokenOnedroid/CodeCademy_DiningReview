@@ -19,6 +19,11 @@ public class Restaurant {
 
     private String name;
     private String zipCode;
+    private String city;
+    private String State;
+
+    private String website;
+    private String phone_number;
 
     private String overallScore;
     private String eggScore;
