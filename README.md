@@ -1,3 +1,7 @@
 # CodeCademy_DiningReview
 
-./mvn spring-boot:run ?
+Codecademy Portfolio Project for __Create REST APIs with Spring and Java__
+
+## for Testruns 
+
+.\mvnw spring-boot:run
